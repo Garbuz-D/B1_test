@@ -1,0 +1,15 @@
+<!-- форма для загрузки данных на сервер -->
+<form enctype="multipart/form-data" action="process.php" method="POST">
+    <!-- выбрать тип таблицы (департаменты или клиенты) -->
+	<p>
+	Выберите тип загружаемой таблицы
+	<select name="formTableType">
+	  <option value="user">пользователи</option>
+	  <option value="department">департаменты</option>
+	</select>
+	</p>
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <!-- кнопка активирует скрипт обработки данных -->
+    Отправить этот файл: <input name="userfile" type="file" accept=".csv"/>
+    <input type="submit" value="Отправить файл" />
+</form>
